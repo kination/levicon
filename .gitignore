@@ -1,0 +1,47 @@
+# Mix build artifacts
+/_build/
+/deps/
+*.ez
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# Release artifacts
+/priv/static/
+/rel/
+/tmp/
+
+# Test coverage
+/cover/
+
+# Dialyzer
+/priv/plts/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Elixir LS
+/.elixir_ls/
+
+# erl_crash.dump
+erl_crash.dump
+
+# Burrito / escript binaries
+levicon
+
+# Other
+.claude/
+.internal-doc/
+docs/
