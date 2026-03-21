@@ -39,7 +39,7 @@
 erl_crash.dump
 
 # Burrito / escript binaries
-levicon
+/levicon
 
 # Other
 .claude/
