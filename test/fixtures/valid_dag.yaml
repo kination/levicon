@@ -1,0 +1,25 @@
+id: etl_pipeline
+schedule: "0 * * * *"
+tasks:
+  - name: extract
+    type: shell
+    command: ./extract.sh
+    retry: 2
+    cpu: "500m"
+    memory: "256Mi"
+  - name: transform
+    type: docker
+    image: "my-transform:latest"
+    command: python transform.py
+    depends_on:
+      - extract
+    cpu: "1000m"
+    memory: "512Mi"
+    volume_mounts:
+      - /data/input
+      - /data/output
+  - name: load
+    type: shell
+    command: ./load.sh
+    depends_on:
+      - transform

@@ -22,8 +22,8 @@ defmodule Levicon.Application do
       # # DAG orchestration engine
       # Levicon.DAG.Engine,
 
-      # # Ecto repo
-      # Levicon.Repo,
+      # Ecto repo
+      Levicon.Repo,
 
       # # Cron scheduler
       # Levicon.Scheduler,

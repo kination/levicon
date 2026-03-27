@@ -4,6 +4,7 @@ defmodule Levicon.Schema.DagSpec do
 
   alias Levicon.Schema.TaskSpec
 
+  @primary_key false
   embedded_schema do
     field :id,       :string
     field :schedule, :string, default: nil
